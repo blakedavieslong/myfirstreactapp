@@ -1,14 +1,32 @@
 import React from 'react';
 import Track from './Track';
 
-function Tracklist() {
+function Tracklist(props) {
+    alert(typeof JSON.stringify(props.tracks));
+
+          /*  return jsonResponse.tracks.items.map(track => ({
+                id: track.id,
+                name: track.name,
+                artist: track.artists[0].name,
+                album: track.album.name,
+                uri: track.uri
+            }));*/
+
+
+            /* {props.tracks.map((track) => {
+                return (
+                    <Track 
+                        title={track.name}
+                        artist={track.artist}
+                        album={track.album}
+                    />
+                );
+            })}  */
     return (
-        <div>
-            <Track title="testSong" artist="testArtist" album="testAlbum"/>
-            <Track title="testSong2" artist="testArtist2" album="testAlbum2"/>
-            <Track title="testSong3" artist="testArtist3" album="testAlbum3"/>
+        <div> 
+            
         </div>
     );
-}
+};
 
 export default Tracklist;

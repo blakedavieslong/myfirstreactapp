@@ -1,11 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import styles from './styles/SearchBar.css';
 
-function SearchBar() {
+function SearchBar(props) {
     const [keyword, setKeyword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
+    };
+
+    const search = () => {
+        props.onSearch(keyword);
     };
 
     return (
@@ -19,7 +23,7 @@ function SearchBar() {
                     className='searchBox' 
                     value={keyword} onChange={(e) => setKeyword(e.target.value)} 
                 />
-                <button className='searchButton'>Search</button>
+                <button className='searchButton' onClick={search}>Search</button>
             </form>
         </div>
     );

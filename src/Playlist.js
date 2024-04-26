@@ -4,7 +4,7 @@ import styles from './styles/Playlist.css';
 
 function Playlist() {
     const [name, setName] = useState('');
-
+//<Tracklist tracks={[]}/>
     return (
         <div className='container'>
             <form name='playlist' id='playlist'>
@@ -17,7 +17,7 @@ function Playlist() {
                     placeholder='Enter playlist name...' 
                     className='pName' />
             </form>
-            <Tracklist />
+            
         </div>
     );
 }

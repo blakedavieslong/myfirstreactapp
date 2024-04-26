@@ -17,7 +17,7 @@ const Spotify = {
       window.history.pushState('Access Token', null, '/'); // This clears the parameters, allowing us to grab a new access token when it expires.
       return accessToken;
     } else {
-      const accessUrl = `https://accounts.spotify.com/authorize`; 
+      let accessUrl = `https://accounts.spotify.com/authorize`; 
       accessUrl += `?response_type=token`;
       accessUrl += `&client_id=${clientId}`;
       accessUrl += `&scope=playlist-modify-public`;
