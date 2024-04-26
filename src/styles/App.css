@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  background-image: url("../resources/backgroundWaves.png");
+  background-size: cover;
+  color: white;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  
+}
+

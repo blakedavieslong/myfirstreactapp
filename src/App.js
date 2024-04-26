@@ -1,27 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './styles/App.css';
 import TitleBar from './TitleBar';
-import SearchPanel from './SearchPanel';
+import SearchBar from './SearchBar';
+import SearchResults from './SearchResults';
+import Playlist from './Playlist';
+import Spotify from "./util/Spotify";
+
 
 function App() {
+  const [searchResults, setSearchResults] = useState('');
+
+  const search = (term) => {
+    Spotify.search(term).then(setSearchResults); 
+  };
+
   return (
     <div className="App">
       <TitleBar />
-      <SearchPanel />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello Codecademy!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchBar onSearch={search}/>
+      <div className='body'>
+        <SearchResults searchResults={searchResults} />
+        <Playlist />
+      </div>
     </div>
   );
 }

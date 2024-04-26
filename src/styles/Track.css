@@ -1,0 +1,29 @@
+.trackSlot {
+    border-top: 1px solid black;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    position: relative;
+}
+
+.songTitle {
+    margin: 0.5rem;
+}
+
+.songInfo {
+    margin: 0.5rem;
+}
+
+.add {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+}
+
+.add:hover {
+    border: 1px solid black;
+}
