@@ -3,6 +3,7 @@
   background-image: url("../resources/backgroundWaves.png");
   background-size: cover;
   color: white;
+  min-height: 100vh;
 }
 
 .body {
