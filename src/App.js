@@ -5,6 +5,7 @@ import SearchBar from './SearchBar';
 import SearchResults from './SearchResults';
 import Playlist from './Playlist';
 import Spotify from "./util/Spotify";
+import FooterStamp from './FooterStamp';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -63,6 +64,7 @@ function App() {
         />
       </div>
       <ToastContainer />
+      <FooterStamp className="footer" /> 
     </div>
   );
 }

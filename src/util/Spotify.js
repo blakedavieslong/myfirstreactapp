@@ -22,9 +22,9 @@ const Spotify = {
       accessUrl += `&client_id=${clientId}`;
       accessUrl += `&scope=playlist-modify-public`;
       accessUrl += `&redirect_uri=${redirectUri}`;
-      window.location = accessUrl;
+      window.location.href = accessUrl;
     }
-  } ,
+  },
 
   
   async search(term) {
